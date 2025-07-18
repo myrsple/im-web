@@ -30,7 +30,7 @@
     <meta name="twitter:image" content="https://islandmint.cz/images/mint.JPG">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -399,7 +399,7 @@
             document.getElementById('snake-game').appendChild(canvas);
          
             // Set font size to be consistent regardless of screen size
-            ctx.font = "16px Ubuntu, Helvetica, sans-serif";
+            ctx.font = "16px Nunito Sans, Helvetica, sans-serif";
          
             frames = 0;
             keystate = {};
@@ -423,7 +423,7 @@
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
                 // Reset font after canvas resize
-                ctx.font = "16px Ubuntu, Helvetica, sans-serif";
+                ctx.font = "16px Nunito Sans, Helvetica, sans-serif";
                 init();
             });
          
@@ -543,11 +543,7 @@
             var displayText = "SCORE: " + score + " | " + (gameRunning ? "⏸" : "▶");
             var textWidth = ctx.measureText(displayText).width;
             
-            // Draw background
-            ctx.fillStyle = "rgba(0,24,130,0.8)";
-            ctx.fillRect(10, 10, textWidth + 20, 40);
-            
-            // Draw the complete text
+            // Draw the complete text (no background)
             ctx.fillStyle = "rgba(255,255,255,0.9)";
             ctx.fillText(displayText, 20, 32);
         }
