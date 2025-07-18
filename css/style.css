@@ -1,0 +1,425 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Full-screen Snake Game Overlay */
+#snake-game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#snake-game canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Clickable area for game controls */
+.game-controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 40px;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+/* Header styles */
+header {
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background-color: rgba(0,24,130,255);
+}
+
+header .logo {
+    height: clamp(5.78rem, 23.12vw, 11.56rem);
+    width: auto;
+    margin-bottom: 1.5rem;
+    filter: brightness(0.85) blur(0.5px);
+}
+
+/* Social links styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: rgba(255,255,255,0.85);
+    font-size: 2.4rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.social-links .fa-instagram:hover {
+    color: #E4405F;
+}
+
+.social-links .fa-spotify:hover {
+    color: #1DB954;
+}
+
+.social-links .fa-apple:hover {
+    color: #FFFFFF;
+}
+
+.social-links .fa-youtube:hover {
+    color: #FF0000;
+}
+
+.social-links .fa-bandcamp:hover {
+    color: #629AA0;
+}
+
+/* Hero image section */
+.hero-image {
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Video section */
+.video-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,24,130,255);
+    padding: 4rem 2rem;
+}
+
+.video-container {
+    width: 80%;
+    aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Linktree section */
+.linktree-section {
+    background-color: rgba(0,24,130,255);
+    padding: 2rem 2rem;
+    min-height: auto;
+}
+
+.linktree-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linktree-card {
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    min-height: 80px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.linktree-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.3);
+}
+
+.card-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: rgba(0,24,130,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-image img.loading {
+    opacity: 0.5;
+}
+
+.card-image img.loaded {
+    opacity: 1;
+}
+
+.card-content {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-content h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.95);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Special styling for album release card */
+.album-release-card {
+    border: 1px solid rgba(255,255,255,0.425);
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(0,24,130,255);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .media-kit {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer .media-kit:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+footer .booking-email {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer .booking-email:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+footer .copyright {
+    color: rgba(255,255,255,0.6);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+footer .copyright a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+footer .copyright a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Hide snake game on tablet and below */
+    #snake-game {
+        display: none;
+    }
+    
+    .game-controls {
+        display: none;
+    }
+    
+    header {
+        padding: 1.5rem 0 1rem 0;
+    }
+    
+    header h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .social-links {
+        gap: 2.4rem;
+    }
+    
+    .social-links a {
+        font-size: 2.08rem;
+    }
+    
+    .hero-image {
+        min-height: 70vh;
+    }
+    
+    .hero-image img {
+        min-height: 70vh;
+    }
+    
+    .video-section {
+        padding: 3rem 1.5rem;
+        min-height: 80vh;
+    }
+    
+    .video-container {
+        width: 85%;
+    }
+    
+    .linktree-section {
+        padding: 1.5rem 1.5rem;
+    }
+    
+    .linktree-container {
+        max-width: 90%;
+    }
+    
+    .card-content h3 {
+        font-size: 0.9rem;
+    }
+    
+    footer .media-kit {
+        font-size: 0.9rem;
+    }
+    
+    footer .booking-email {
+        font-size: 0.9rem;
+    }
+    
+    footer .copyright {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ensure snake game stays hidden on mobile */
+    #snake-game {
+        display: none;
+    }
+    
+    .game-controls {
+        display: none;
+    }
+    
+    header {
+        padding: 1rem 0 0.5rem 0;
+    }
+    
+    header h1 {
+        margin-bottom: 0.8rem;
+    }
+    
+    .social-links {
+        gap: 2rem;
+    }
+    
+    .social-links a {
+        font-size: 1.92rem;
+    }
+    
+    .hero-image {
+        min-height: 60vh;
+    }
+    
+    .hero-image img {
+        min-height: 60vh;
+    }
+    
+    .video-section {
+        padding: 2rem 1rem;
+        min-height: 70vh;
+    }
+    
+    .video-container {
+        width: 90%;
+    }
+    
+    .linktree-section {
+        padding: 1rem 1rem;
+    }
+    
+    .linktree-card {
+        min-height: 70px;
+    }
+    
+    .card-image {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .card-content {
+        padding: 0.8rem 1rem;
+    }
+    
+    .card-content h3 {
+        font-size: 0.85rem;
+    }
+    
+    footer .media-kit {
+        font-size: 0.85rem;
+    }
+    
+    footer .booking-email {
+        font-size: 0.85rem;
+    }
+    
+    footer .copyright {
+        font-size: 0.7rem;
+    }
+} 

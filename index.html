@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Mint</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czech Republic.">
+    <meta name="keywords" content="Island Mint, indie band, Prague, Czech Republic, music, indie rock, psychedelic, shoegaze">
+    <meta name="author" content="Island Mint">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://islandmint.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/mint.JPG">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Island Mint - Indie Band from Prague">
+    <meta property="og:description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czech Republic.">
+    <meta property="og:image" content="https://islandmint.com/images/mint.JPG">
+    <meta property="og:url" content="https://islandmint.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Island Mint">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Island Mint - Indie Band from Prague">
+    <meta name="twitter:description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czech Republic.">
+    <meta name="twitter:image" content="https://islandmint.com/images/mint.JPG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Full-screen Snake Game Overlay -->
+    <div id="snake-game"></div>
+    <!-- Clickable area for game controls -->
+    <div class="game-controls"></div>
+
+    <header>
+        <img src="images/island-mint.png" alt="Island Mint" class="logo">
+        <div class="social-links">
+            <a href="https://www.instagram.com/island_mint/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://open.spotify.com/artist/1vVcWrAI5GcT8A2c9KZS2j" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://music.apple.com/cz/artist/island-mint/1514755142" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-apple"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCFD8e2-RvRZUxgyjmrukrSQ" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://islandmint.bandcamp.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-bandcamp"></i>
+            </a>
+        </div>
+    </header>
+    
+    <section class="hero-image">
+        <img src="images/mint.jpg" alt="Island Mint">
+    </section>
+    
+    <section class="video-section">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/cbvx9q_GjBc" 
+                title="Island Mint Video"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    
+    <section class="linktree-section">
+        <div class="linktree-container">
+            <a href="https://open.spotify.com/album/1oZSYW3tyMXTTXKVV5SWkS?go=1&nd=1&dlsi=826380442e0a4888" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="images/mint.JPG" alt="Tsunami" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Tsunami – latest single out now!</h3>
+                </div>
+            </a>
+            
+            <a href="https://goout.net/en/island-mint-album-release%2Bbrankos-bridge/szyjuvx/" target="_blank" class="linktree-card album-release-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="images/mint.JPG" alt="Concert" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Album release party 31/10/2025 – tickets</h3>
+                </div>
+            </a>
+            
+            <a href="https://www.youtube.com/watch?v=cbvx9q_GjBc" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="https://i.ytimg.com/vi/cbvx9q_GjBc/maxresdefault.jpg" alt="Man of the People" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Man of the People – music video</h3>
+                </div>
+            </a>
+            
+            <a href="https://www.youtube.com/watch?v=FMpJhj0Qwp0" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="https://i.ytimg.com/vi/FMpJhj0Qwp0/maxresdefault.jpg" alt="Burnout" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Burnout – music video</h3>
+                </div>
+            </a>
+            
+            <a href="https://www.youtube.com/watch?v=kLiK7QKFzxs" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="https://i.ytimg.com/vi/kLiK7QKFzxs/maxresdefault.jpg" alt="Insomnia Town" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Insomnia Town – music video</h3>
+                </div>
+            </a>
+            
+            <a href="https://www.youtube.com/watch?v=sOo313Juwvs" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="https://i.ytimg.com/vi/sOo313Juwvs/maxresdefault.jpg" alt="Irreality" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Irreality – music video</h3>
+                </div>
+            </a>
+            
+            <a href="https://swarmmag.com/music/all-studium-no-punctum/" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="images/mint.JPG" alt="Interview" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Swarm Mag – interview</h3>
+                </div>
+            </a>
+            
+            <a href="https://wave.rozhlas.cz/hudba-je-pro-me-hra-odhaluju-v-ni-sve-vnitrni-dite-rika-matyas-adamek-z-kapely-8763898" target="_blank" class="linktree-card" data-fetch-og="true">
+                <div class="card-image">
+                    <img src="images/mint.JPG" alt="Radio Interview" class="og-image">
+                </div>
+                <div class="card-content">
+                    <h3>Radio Wave – interview</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <section class="video-section">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/b6qPl9TfgVs?si=lUJkGzKDAGHFbwdJ" 
+                title="Radio Wave Studio Session"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <a href="https://drive.google.com/drive/folders/1L6kzdaAbbi2RM4kCTNmkJfphqVOyU--B?usp=sharing" target="_blank" rel="noopener noreferrer" class="media-kit">Media kit</a>
+        <a href="mailto:booking@paperwallrecords.com" class="booking-email">booking@paperwallrecords.com</a>
+        <p class="copyright">© 2024 Island Mint | site by <a href="https://kovarik.xyz" target="_blank" rel="noopener noreferrer">kovarik.xyz</a></p>
+    </footer>
+
+    <script>
+        // Enhanced Arrow Key Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollDistance = window.innerHeight * 0.6; // Scroll 60% of viewport height
+            
+            document.addEventListener('keydown', function(e) {
+                // Only handle arrow keys when not in an input/textarea
+                if (['input', 'textarea', 'select'].includes(e.target.tagName.toLowerCase())) {
+                    return;
+                }
+                
+                switch(e.key) {
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        window.scrollBy({
+                            top: -scrollDistance,
+                            behavior: 'smooth'
+                        });
+                        break;
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        window.scrollBy({
+                            top: scrollDistance,
+                            behavior: 'smooth'
+                        });
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        window.scrollBy({
+                            left: -scrollDistance,
+                            behavior: 'smooth'
+                        });
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        window.scrollBy({
+                            left: scrollDistance,
+                            behavior: 'smooth'
+                        });
+                        break;
+                }
+            });
+        });
+
+        // Open Graph Image Fetcher
+        async function fetchOGImage(url, imgElement) {
+            try {
+                // Use a CORS proxy service to fetch OG data
+                const proxyUrl = 'https://api.allorigins.win/get?url=';
+                const response = await fetch(proxyUrl + encodeURIComponent(url));
+                const data = await response.json();
+                
+                if (data.contents) {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data.contents, 'text/html');
+                    
+                    // Look for Open Graph image
+                    let ogImage = doc.querySelector('meta[property="og:image"]');
+                    if (!ogImage) {
+                        ogImage = doc.querySelector('meta[name="og:image"]');
+                    }
+                    
+                    if (ogImage && ogImage.content) {
+                        // Make sure the URL is absolute
+                        let imageUrl = ogImage.content;
+                        if (imageUrl.startsWith('//')) {
+                            imageUrl = 'https:' + imageUrl;
+                        } else if (imageUrl.startsWith('/')) {
+                            const urlObj = new URL(url);
+                            imageUrl = urlObj.origin + imageUrl;
+                        }
+                        
+                        imgElement.src = imageUrl;
+                        imgElement.onerror = function() {
+                            // Fallback to mint.JPG if OG image fails to load
+                            console.log('OG image failed to load for:', url, 'using mint.JPG fallback');
+                            imgElement.src = 'images/mint.JPG';
+                        };
+                    }
+                }
+            } catch (error) {
+                console.log('Error fetching OG image for:', url, error, 'using mint.JPG fallback');
+                // Fallback to mint.JPG if fetch fails
+                imgElement.src = 'images/mint.JPG';
+            }
+        }
+        
+        // YouTube thumbnail extractor
+        function getYouTubeThumb(url) {
+            const videoId = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/);
+            if (videoId) {
+                return `https://img.youtube.com/vi/${videoId[1]}/maxresdefault.jpg`;
+            }
+            return null;
+        }
+        
+
+        
+        // Initialize OG image fetching when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('[data-fetch-og="true"]');
+            
+            cards.forEach(card => {
+                const link = card.href;
+                const img = card.querySelector('.og-image');
+                
+                if (link && img && link !== window.location.href + '#') {
+                    // Special handling for YouTube
+                    if (link.includes('youtube.com') || link.includes('youtu.be')) {
+                        const thumbUrl = getYouTubeThumb(link);
+                        if (thumbUrl) {
+                            img.src = thumbUrl;
+                            return;
+                        }
+                    }
+                    
+                    // For all non-YouTube URLs, try to fetch OG image with mint.JPG fallback
+                    fetchOGImage(link, img);
+                }
+            });
+        });
+
+        var
+        COLS,
+        ROWS,
+        EMPTY = 0,
+        SNAKE = 1,
+        FRUIT = 2,
+        LEFT  = 0,
+        UP    = 1,
+        RIGHT = 2,
+        DOWN  = 3,
+        KEY_LEFT  = 37,
+        KEY_UP    = 38,
+        KEY_RIGHT = 39,
+        KEY_DOWN  = 40,
+        canvas,	  
+        ctx,	  
+        keystate, 
+        frames,   
+        score,
+        gameRunning = true;	  
+         
+        grid = {
+         
+            width: null,  
+            height: null, 
+            _grid: null,  
+         
+            init: function(d, c, r) {
+                this.width = c;
+                this.height = r;
+         
+                this._grid = [];
+                for (var x=0; x < c; x++) {
+                this._grid.push([]);
+                for (var y=0; y < r; y++) {
+                this._grid[x].push(d);
+                }
+                }
+            },
+         
+            set: function(val, x, y) {
+                this._grid[x][y] = val;
+            },
+         
+            get: function(x, y) {
+                return this._grid[x][y];
+            }
+        }
+         
+        snake = {
+         
+            direction: null, 
+            last: null,	 
+            _queue: null,	
+         
+            init: function(d, x, y) {
+                this.direction = d;
+         
+                this._queue = [];
+                this.insert(x, y);
+            },
+         
+            insert: function(x, y) {
+                this._queue.unshift({x:x, y:y});
+                this.last = this._queue[0];
+            },
+         
+            remove: function() {
+                return this._queue.pop();
+            }
+        };
+         
+        function setFood() {
+            var empty = [];
+            
+            for (var x=0; x < grid.width; x++) {
+                for (var y=0; y < grid.height; y++) {
+                if (grid.get(x, y) === EMPTY) {
+                empty.push({x:x, y:y});
+                }
+                }
+            }
+            
+            var randpos = empty[Math.round(Math.random()*(empty.length - 1))];
+            grid.set(FRUIT, randpos.x, randpos.y);
+        }
+
+        function toggleGame() {
+            gameRunning = !gameRunning;
+        }
+         
+        function main() {
+            // Calculate grid size based on screen size
+            var cellSize = 25;
+            COLS = Math.floor(window.innerWidth / cellSize);
+            ROWS = Math.floor(window.innerHeight / cellSize);
+            
+            canvas = document.createElement("canvas");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            ctx = canvas.getContext("2d");
+            
+            document.getElementById('snake-game').appendChild(canvas);
+         
+            // Set font size to be consistent regardless of screen size
+            ctx.font = "16px Ubuntu, Helvetica, sans-serif";
+         
+            frames = 0;
+            keystate = {};
+            
+            document.addEventListener("keydown", function(evt) {
+                keystate[evt.keyCode] = true;
+            });
+            document.addEventListener("keyup", function(evt) {
+                delete keystate[evt.keyCode];
+            });
+
+            // Add click handler to the separate controls div
+            document.querySelector('.game-controls').addEventListener('click', function(evt) {
+                toggleGame();
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                COLS = Math.floor(window.innerWidth / cellSize);
+                ROWS = Math.floor(window.innerHeight / cellSize);
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                // Reset font after canvas resize
+                ctx.font = "16px Ubuntu, Helvetica, sans-serif";
+                init();
+            });
+         
+            init();
+            loop();
+        }
+         
+        function init() {
+            score = 0;
+         
+            grid.init(EMPTY, COLS, ROWS);
+         
+            var sp = {x:Math.floor(COLS/2), y:ROWS-1};
+            snake.init(UP, sp.x, sp.y);
+            grid.set(SNAKE, sp.x, sp.y);
+         
+            setFood();
+        }
+         
+        function loop() {
+            update();
+            draw();
+            
+            window.requestAnimationFrame(loop, canvas);
+        }
+         
+        function update() {
+            if (!gameRunning) return;
+            
+            frames++;
+         
+            if (keystate[KEY_LEFT] && snake.direction !== RIGHT) {
+            snake.direction = LEFT;
+            }
+            if (keystate[KEY_UP] && snake.direction !== DOWN) {
+            snake.direction = UP;
+            }
+            if (keystate[KEY_RIGHT] && snake.direction !== LEFT) {
+            snake.direction = RIGHT;
+            }
+            if (keystate[KEY_DOWN] && snake.direction !== UP) {
+            snake.direction = DOWN;
+            }
+
+            // Calculate speed based on score - starts at 8, gets faster as score increases
+            // Minimum speed of 3 frames to keep it playable
+            var gameSpeed = Math.max(3, 8 - Math.floor(score / 3));
+         
+            if (frames%gameSpeed === 0) {
+            var nx = snake.last.x;
+            var ny = snake.last.y;
+         
+            switch (snake.direction) {
+            case LEFT:
+            nx--;
+            break;
+            case UP:
+            ny--;
+            break;
+            case RIGHT:
+            nx++;
+            break;
+            case DOWN:
+            ny++;
+            break;
+            }
+         
+            if (0 > nx || nx > grid.width-1  ||
+            0 > ny || ny > grid.height-1 ||
+            grid.get(nx, ny) === SNAKE
+            ) {
+            return init();
+            }
+         
+            if (grid.get(nx, ny) === FRUIT) {
+            score++;
+            setFood();
+            } else {
+            var tail = snake.remove();
+            grid.set(EMPTY, tail.x, tail.y);
+            }
+         
+            grid.set(SNAKE, nx, ny);
+            snake.insert(nx, ny);
+            }
+        }
+         
+        function draw() {
+            // Clear canvas with transparent background
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            var tw = canvas.width/grid.width;
+            var th = canvas.height/grid.height;
+            
+            // Only draw game elements if running
+            if (gameRunning) {
+                for (var x=0; x < grid.width; x++) {
+                for (var y=0; y < grid.height; y++) {
+                switch (grid.get(x, y)) {
+                case EMPTY:
+                // Don't draw anything for empty spaces (transparent)
+                break;
+                case SNAKE:
+                ctx.fillStyle = "rgba(255,255,255,0.9)";
+                ctx.fillRect(x*tw, y*th, tw-1, th-1);
+                break;
+                case FRUIT:
+                ctx.fillStyle = "rgba(255,0,255,0.9)";
+                ctx.fillRect(x*tw, y*th, tw-1, th-1);
+                break;
+                }
+                }
+                }
+            }
+            
+            // Create the full display text with ASCII symbols
+            var displayText = "SCORE: " + score + " | " + (gameRunning ? "⏸" : "▶");
+            var textWidth = ctx.measureText(displayText).width;
+            
+            // Draw background
+            ctx.fillStyle = "rgba(0,24,130,0.8)";
+            ctx.fillRect(10, 10, textWidth + 20, 40);
+            
+            // Draw the complete text
+            ctx.fillStyle = "rgba(255,255,255,0.9)";
+            ctx.fillText(displayText, 20, 32);
+        }
+         
+        // Start the game when page loads
+        window.addEventListener('load', main);
+    </script>
+</body>
+</html> 
