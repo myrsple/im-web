@@ -229,34 +229,28 @@ footer {
     text-align: center;
 }
 
-footer .media-kit {
+.footer-links {
+    margin-bottom: 0.5rem;
+}
+
+footer .media-kit, footer .booking-email {
     color: rgba(255,255,255,0.85);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1rem;
     text-decoration: none;
     transition: opacity 0.3s ease;
-    display: block;
-    margin-bottom: 0.5rem;
+    display: inline;
 }
 
-footer .media-kit:hover {
+footer .media-kit:hover, footer .booking-email:hover {
     opacity: 0.8;
     text-decoration: underline;
 }
 
-footer .booking-email {
+footer .separator {
     color: rgba(255,255,255,0.85);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1rem;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-footer .booking-email:hover {
-    opacity: 0.8;
-    text-decoration: underline;
 }
 
 footer .copyright {
