@@ -172,6 +172,7 @@ header .logo {
     font-size: 1.1rem;
     line-height: 1.6;
     color: rgba(255,255,255,0.9);
+    font-style: italic;
     margin: 0;
     text-align: left;
 }
