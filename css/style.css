@@ -327,10 +327,25 @@ header .logo {
     text-decoration: none;
 }
 
+/* OSA logo banner */
+
+.osa-banner {
+    background-color: rgba(0,24,130,255);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.osa-logo {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
 /* Footer styles */
 footer {
     background-color: rgba(0,24,130,255);
-    padding: 2rem 0;
+    padding: 1.5rem 0 2rem 0;
     text-align: center;
 }
 
