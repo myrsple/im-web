@@ -15,6 +15,65 @@ body {
     overflow-x: hidden;
 }
 
+/* Slun popup modal */
+.slun-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15vh 0; /* ensure 15% top/bottom space */
+    z-index: 10001; /* Above snake & controls */
+}
+
+.slun-modal-overlay.is-visible {
+    display: flex;
+}
+
+.slun-modal-content {
+    position: relative;
+    max-width: min(90vw, 700px);
+    max-height: 70vh; /* leave 15% top and bottom when centered */
+    width: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.slun-modal-image {
+    display: block;
+    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.slun-modal-link:hover .slun-modal-image {
+    transform: scale(1.05);
+}
+
+.slun-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slun-modal-close:hover {
+    background: rgba(0,0,0,0.8);
+}
+
 /* Full-screen Snake Game Overlay */
 #snake-game {
     position: fixed;
