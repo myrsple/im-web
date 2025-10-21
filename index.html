@@ -76,8 +76,8 @@
             <a href="https://islandmint.bandcamp.com/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-bandcamp"></i>
             </a>
-            <a href="https://music.apple.com/cz/artist/island-mint/1514755142" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-apple"></i>
+            <a href="https://music.apple.com/cz/artist/island-mint/1514755142" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
+                <i class="fab fa-itunes-note"></i>
             </a>
         </div>
     </header>
@@ -103,9 +103,10 @@
         <div class="bio-text">
             <p>"Mesmerizing, sun-drenched and heartwarming, the music of Island Mint is a rare occurrence on the Prague music scene. Inspired by 60s sunshine pop, garage rock, and 90s shoegaze, the band's warm analog sound submerges you in an ocean of childlike nostalgia."</p>
         </div>
+        
         <div class="linktree-container">
             <div class="linktree-column">
-                <h2 class="column-headline">Slun – latest album</h2>
+                <h2 class="column-headline">SLUN</h2>
                 <div class="column-cards">
                     <a href="https://goout.net/en/island-mint-album-release%2Bbrankos-bridge/szyjuvx/" target="_blank" class="linktree-card album-release-card" data-fetch-og="true">
                         <div class="card-image">
@@ -207,44 +208,42 @@
             <h2 class="shows-title">Upcoming shows</h2>
             <div class="shows-table-wrapper">
                 <table class="shows-table" aria-describedby="shows-note">
-                    <thead>
-                        <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">City</th>
-                            <th scope="col">Venue</th>
-                            <th scope="col">Tickets</th>
-                        </tr>
-                    </thead>
+                    <colgroup>
+                        <col style="width:18%">
+                        <col style="width:24%">
+                        <col style="width:42%">
+                        <col style="width:16%">
+                    </colgroup>
                     <tbody id="shows-tbody">
                         <tr>
                             <td>30.10.</td>
                             <td>Plzeň</td>
                             <td><a class="ticket-link" href="https://maps.google.com/?q=New%20M%C5%8D%C5%8Dvement%20Plze%C5%88" target="_blank" rel="noopener noreferrer">New Mōōvement</a></td>
-                            <td><a class="ticket-link" href="https://goout.net/en/tickets/inspiral-off/qdgib/" target="_blank" rel="noopener noreferrer">Get</a></td>
+                            <td><a class="ticket-link" href="https://goout.net/en/tickets/inspiral-off/qdgib/" target="_blank" rel="noopener noreferrer">Tickets</a></td>
                         </tr>
                         <tr>
                             <td>31.10.</td>
                             <td>Praha</td>
                             <td><a class="ticket-link" href="https://maps.google.com/?q=MeetFactory%20Prague" target="_blank" rel="noopener noreferrer">MeetFactory</a></td>
-                            <td><a class="ticket-link" href="https://goout.net/en/tickets/island-mint-album-release+brankos-bridge/tydfb/" target="_blank" rel="noopener noreferrer">Get</a></td>
+                            <td><a class="ticket-link" href="https://goout.net/en/tickets/island-mint-album-release+brankos-bridge/tydfb/" target="_blank" rel="noopener noreferrer">Tickets</a></td>
                         </tr>
                         <tr>
                             <td>14.11.</td>
                             <td>Dresden</td>
                             <td><a class="ticket-link" href="https://maps.google.com/?q=Chemiefabrik%20Dresden" target="_blank" rel="noopener noreferrer">Chemiefabrik</a></td>
-                            <td><a class="ticket-link" href="https://www.tixforgigs.com/Event/66790" target="_blank" rel="noopener noreferrer">Get</a></td>
+                            <td><a class="ticket-link" href="https://www.tixforgigs.com/Event/66790" target="_blank" rel="noopener noreferrer">Tickets</a></td>
                         </tr>
                         <tr>
                             <td>15.11.</td>
                             <td>Ústí nad Labem</td>
                             <td><a class="ticket-link" href="https://maps.google.com/?q=N%C3%A1rodn%C3%AD%20d%C5%AFm%20%C3%9Ast%C3%AD%20nad%20Labem" target="_blank" rel="noopener noreferrer">Národní dům</a></td>
-                            <td><a class="ticket-link" href="https://www.vstupenkyusti.cz/cs/akce/2629-island-mint-david-pomahac" target="_blank" rel="noopener noreferrer">Get</a></td>
+                            <td><a class="ticket-link" href="https://www.vstupenkyusti.cz/cs/akce/2629-island-mint-david-pomahac" target="_blank" rel="noopener noreferrer">Tickets</a></td>
                         </tr>
                         <tr>
                             <td>21.11.</td>
                             <td>Brno</td>
                             <td><a class="ticket-link" href="https://maps.google.com/?q=Klub%20Alterna%20Brno" target="_blank" rel="noopener noreferrer">Klub Alterna</a></td>
-                            <td><a class="ticket-link" href="https://goout.net/en/tickets/christina-mantis+island-mint/sdyfb/" target="_blank" rel="noopener noreferrer">Get</a></td>
+                            <td><a class="ticket-link" href="https://goout.net/en/tickets/christina-mantis+island-mint/sdyfb/" target="_blank" rel="noopener noreferrer">Tickets</a></td>
                         </tr>
                         <tr>
                             <td>22.11.</td>
@@ -622,7 +621,7 @@
             a.target = '_blank';
             a.rel = 'noopener noreferrer';
             a.className = 'ticket-link';
-            a.textContent = 'Get';
+            a.textContent = 'Tickets';
             return a;
         }
 
