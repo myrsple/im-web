@@ -86,6 +86,8 @@
         <img src="images/mint.JPG" alt="Island Mint">
     </section>
     
+    
+    
     <section class="video-section">
         <div class="video-container">
             <iframe 
@@ -204,52 +206,20 @@
     </section>
     
     <section class="shows-section">
-        <div class="shows-container" data-sheet-id="" data-sheet-name="Upcoming">
+        <div class="shows-container" data-sheet-id="1Mq2fPlflhmgZwLdS-JCFTSFWVKy55PTcO4pMCk9LxMs" data-sheet-name="Upcoming" data-sheet-gid="0">
             <h2 class="shows-title">Upcoming shows</h2>
             <div class="shows-table-wrapper">
                 <table class="shows-table" aria-describedby="shows-note">
                     <colgroup>
                         <col style="width:18%">
-                        <col style="width:24%">
-                        <col style="width:42%">
-                        <col style="width:16%">
+                        <col style="width:26%">
+                        <col style="width:34%">
+                        <col style="width:11%">
+                        <col style="width:11%">
                     </colgroup>
                     <tbody id="shows-tbody">
                         <tr>
-                            <td>30.10.</td>
-                            <td>Plzeň</td>
-                            <td><a class="ticket-link" href="https://maps.google.com/?q=New%20M%C5%8D%C5%8Dvement%20Plze%C5%88" target="_blank" rel="noopener noreferrer">New Mōōvement</a></td>
-                            <td><a class="ticket-link" href="https://goout.net/en/tickets/inspiral-off/qdgib/" target="_blank" rel="noopener noreferrer">Tickets</a></td>
-                        </tr>
-                        <tr>
-                            <td>31.10.</td>
-                            <td>Praha</td>
-                            <td><a class="ticket-link" href="https://maps.google.com/?q=MeetFactory%20Prague" target="_blank" rel="noopener noreferrer">MeetFactory</a></td>
-                            <td><a class="ticket-link" href="https://goout.net/en/tickets/island-mint-album-release+brankos-bridge/tydfb/" target="_blank" rel="noopener noreferrer">Tickets</a></td>
-                        </tr>
-                        <tr>
-                            <td>14.11.</td>
-                            <td>Dresden</td>
-                            <td><a class="ticket-link" href="https://maps.google.com/?q=Chemiefabrik%20Dresden" target="_blank" rel="noopener noreferrer">Chemiefabrik</a></td>
-                            <td><a class="ticket-link" href="https://www.tixforgigs.com/Event/66790" target="_blank" rel="noopener noreferrer">Tickets</a></td>
-                        </tr>
-                        <tr>
-                            <td>15.11.</td>
-                            <td>Ústí nad Labem</td>
-                            <td><a class="ticket-link" href="https://maps.google.com/?q=N%C3%A1rodn%C3%AD%20d%C5%AFm%20%C3%9Ast%C3%AD%20nad%20Labem" target="_blank" rel="noopener noreferrer">Národní dům</a></td>
-                            <td><a class="ticket-link" href="https://www.vstupenkyusti.cz/cs/akce/2629-island-mint-david-pomahac" target="_blank" rel="noopener noreferrer">Tickets</a></td>
-                        </tr>
-                        <tr>
-                            <td>21.11.</td>
-                            <td>Brno</td>
-                            <td><a class="ticket-link" href="https://maps.google.com/?q=Klub%20Alterna%20Brno" target="_blank" rel="noopener noreferrer">Klub Alterna</a></td>
-                            <td><a class="ticket-link" href="https://goout.net/en/tickets/christina-mantis+island-mint/sdyfb/" target="_blank" rel="noopener noreferrer">Tickets</a></td>
-                        </tr>
-                        <tr>
-                            <td>22.11.</td>
-                            <td>Ostrava</td>
-                            <td><a class="ticket-link" href="https://maps.app.goo.gl/uDhnVUjMKkXUDbbH8" target="_blank" rel="noopener noreferrer">Kulturní centrum Provoz</a></td>
-                            <td>Coming soon</td>
+                            <td colspan="5" class="shows-empty">Loading…</td>
                         </tr>
                     </tbody>
                 </table>
@@ -587,7 +557,11 @@
         });
 
         // Google Sheets loader for Upcoming shows
-        function buildGvizUrl(sheetId, sheetName) {
+        function buildGvizUrl(sheetId, sheetName, sheetGid) {
+            const gid = (sheetGid || '').trim();
+            if (gid) {
+                return `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?gid=${gid}`;
+            }
             const encodedSheetName = encodeURIComponent(sheetName || 'Sheet1');
             return `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?sheet=${encodedSheetName}`;
         }
@@ -613,7 +587,9 @@
 
         function createTicketsCellContent(value) {
             const trimmed = value.trim();
-            if (!trimmed) return document.createTextNode('');
+            if (!trimmed) {
+                return document.createTextNode('Tickets at the door');
+            }
             const isUrl = /^https?:\/\//i.test(trimmed);
             if (!isUrl) return document.createTextNode(trimmed);
             const a = document.createElement('a');
@@ -625,9 +601,23 @@
             return a;
         }
 
-        async function loadShowsFromGoogleSheet(sheetId, sheetName) {
+        function createEventCellContent(value) {
+            const trimmed = value.trim();
+            if (!trimmed) return document.createTextNode('');
+            const isUrl = /^https?:\/\//i.test(trimmed);
+            if (!isUrl) return document.createTextNode(trimmed);
+            const a = document.createElement('a');
+            a.href = trimmed;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.className = 'ticket-link';
+            a.textContent = 'Event';
+            return a;
+        }
+
+        async function loadShowsFromGoogleSheet(sheetId, sheetName, sheetGid) {
             try {
-                const url = buildGvizUrl(sheetId, sheetName);
+                const url = buildGvizUrl(sheetId, sheetName, sheetGid);
                 const res = await fetch(url);
                 const text = await res.text();
                 const json = extractGvizJson(text);
@@ -638,60 +628,139 @@
                         date: formatCellValue(cols[0]),
                         city: formatCellValue(cols[1]),
                         venue: formatCellValue(cols[2]),
-                        tickets: formatCellValue(cols[3])
+                        tickets: formatCellValue(cols[3]),
+                        event: formatCellValue(cols[4])
                     }))
-                    .filter(row => row.date || row.city || row.venue || row.tickets);
+                    .filter(row => row.date || row.city || row.venue || row.tickets || row.event);
             } catch (e) {
                 return [];
             }
         }
 
-        async function initShowsTable() {
-            const container = document.querySelector('.shows-container');
-            const tbody = document.getElementById('shows-tbody');
-            if (!container || !tbody) return;
+        async function initShowsTables() {
+            const containers = document.querySelectorAll('.shows-container');
+            if (!containers.length) return;
 
-            const sheetId = (container.getAttribute('data-sheet-id') || '').trim();
-            const sheetName = (container.getAttribute('data-sheet-name') || 'Upcoming').trim();
+            for (const container of containers) {
+                const tbody = container.querySelector('tbody') || document.getElementById('shows-tbody');
+                const wrapper = container.querySelector('.shows-table-wrapper');
+                if (!tbody) continue;
 
-            // If no sheet configured yet, leave the placeholder row
-            if (!sheetId) return;
+                const sheetId = (container.getAttribute('data-sheet-id') || '').trim();
+                const sheetName = (container.getAttribute('data-sheet-name') || 'Upcoming').trim();
+                const sheetGid = (container.getAttribute('data-sheet-gid') || '').trim();
 
-            const rows = await loadShowsFromGoogleSheet(sheetId, sheetName);
-            // Clear existing tbody
-            tbody.innerHTML = '';
+                // If no sheet configured yet, leave the placeholder row
+                if (!sheetId) continue;
 
-            if (!rows.length) {
-                const tr = document.createElement('tr');
-                const td = document.createElement('td');
-                td.colSpan = 4;
-                td.className = 'shows-empty';
-                td.textContent = 'No upcoming shows yet';
-                tr.appendChild(td);
-                tbody.appendChild(tr);
-                return;
+                const rows = await loadShowsFromGoogleSheet(sheetId, sheetName, sheetGid);
+                // Clear existing tbody
+                tbody.innerHTML = '';
+
+                if (!rows.length) {
+                    const tr = document.createElement('tr');
+                    const td = document.createElement('td');
+                    td.colSpan = 5;
+                    td.className = 'shows-empty';
+                    td.textContent = 'No upcoming shows yet';
+                    tr.appendChild(td);
+                    tbody.appendChild(tr);
+                    continue;
+                }
+
+                rows.forEach(row => {
+                    const tr = document.createElement('tr');
+                    const dateTd = document.createElement('td');
+                    dateTd.textContent = row.date;
+                    const cityTd = document.createElement('td');
+                    cityTd.textContent = row.city;
+                    const venueTd = document.createElement('td');
+                    venueTd.textContent = row.venue;
+                    const ticketsTd = document.createElement('td');
+                    ticketsTd.appendChild(createTicketsCellContent(row.tickets));
+                    const eventTd = document.createElement('td');
+                    eventTd.appendChild(createEventCellContent(row.event));
+
+                    tr.appendChild(dateTd);
+                    tr.appendChild(cityTd);
+                    tr.appendChild(venueTd);
+                    tr.appendChild(ticketsTd);
+                    tr.appendChild(eventTd);
+                    tbody.appendChild(tr);
+                });
+
+                // If more than 8 events, cap visible height and enable vertical scroll
+                try {
+                    const trEls = tbody.querySelectorAll('tr');
+                    if (trEls.length > 8 && wrapper) {
+                        let capHeight = 0;
+                        for (let i = 0; i < 8; i++) {
+                            capHeight += trEls[i].offsetHeight;
+                        }
+                        // Add 1px buffer for borders
+                        wrapper.style.maxHeight = (capHeight + 1) + 'px';
+                        wrapper.style.overflowY = 'auto';
+                    }
+                } catch (e) { /* no-op */ }
             }
-
-            rows.forEach(row => {
-                const tr = document.createElement('tr');
-                const dateTd = document.createElement('td');
-                dateTd.textContent = row.date;
-                const cityTd = document.createElement('td');
-                cityTd.textContent = row.city;
-                const venueTd = document.createElement('td');
-                venueTd.textContent = row.venue;
-                const ticketsTd = document.createElement('td');
-                ticketsTd.appendChild(createTicketsCellContent(row.tickets));
-
-                tr.appendChild(dateTd);
-                tr.appendChild(cityTd);
-                tr.appendChild(venueTd);
-                tr.appendChild(ticketsTd);
-                tbody.appendChild(tr);
-            });
         }
 
-        document.addEventListener('DOMContentLoaded', initShowsTable);
+        document.addEventListener('DOMContentLoaded', initShowsTables);
+
+        // Build JSON-LD from dynamic rows for SEO
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                const container = document.querySelector('.shows-container');
+                if (!container) return;
+                const sheetId = (container.getAttribute('data-sheet-id') || '').trim();
+                const sheetName = (container.getAttribute('data-sheet-name') || 'Upcoming').trim();
+                const sheetGid = (container.getAttribute('data-sheet-gid') || '').trim();
+                if (!sheetId) return;
+                const rows = await loadShowsFromGoogleSheet(sheetId, sheetName, sheetGid);
+                if (!rows.length) return;
+
+                const events = rows.map(r => {
+                    // Attempt to parse date into ISO (YYYY-MM-DD). If not parseable, skip startDate.
+                    let isoDate = undefined;
+                    const m = r.date && r.date.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})?/);
+                    if (m) {
+                        const d = m[1].padStart(2, '0');
+                        const mo = m[2].padStart(2, '0');
+                        const y = m[3] || String(new Date().getFullYear());
+                        isoDate = `${y}-${mo}-${d}`;
+                    }
+                    const locationName = r.venue || '';
+                    const city = r.city || '';
+                    const mapQuery = locationName && city ? `${locationName} ${city}` : (locationName || city);
+                    const locationSameAs = mapQuery ? `https://maps.google.com/?q=${encodeURIComponent(mapQuery)}` : undefined;
+                    const offersUrl = /^https?:\/\//i.test(r.tickets || '') ? r.tickets : undefined;
+                    return {
+                        '@type': 'Event',
+                        name: city ? `Island Mint — ${city}` : 'Island Mint',
+                        ...(isoDate ? { startDate: isoDate } : {}),
+                        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+                        eventStatus: 'https://schema.org/EventScheduled',
+                        location: {
+                            '@type': 'Place',
+                            name: locationName || 'Venue',
+                            address: {
+                                '@type': 'PostalAddress',
+                                addressLocality: city || '',
+                                addressCountry: ''
+                            },
+                            ...(locationSameAs ? { sameAs: locationSameAs } : {})
+                        },
+                        ...(offersUrl ? { offers: { '@type': 'Offer', url: offersUrl, availability: 'https://schema.org/InStock' } } : {}),
+                        performer: { '@type': 'MusicGroup', name: 'Island Mint' }
+                    };
+                });
+
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': events });
+                document.head.appendChild(script);
+            } catch (e) {}
+        });
 
         var
         COLS,

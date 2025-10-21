@@ -217,7 +217,7 @@ header .logo {
 }
 
 .shows-title {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     color: rgba(255,255,255,0.95);
@@ -232,7 +232,8 @@ header .logo {
 .shows-table-wrapper {
     background: transparent; /* transparent rows look */
     border-radius: 0; /* remove radius specifically for table */
-    overflow: hidden;
+    overflow: auto; /* horizontal and vertical as needed */
+    -webkit-overflow-scrolling: touch;
 }
 
 .shows-table {
@@ -270,6 +271,15 @@ header .logo {
 }
 
 .ticket-link:hover {
+    text-decoration: underline;
+}
+
+.event-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.event-link:hover {
     text-decoration: underline;
 }
 
@@ -646,7 +656,7 @@ footer .copyright a:hover {
         padding: 0.8rem 0.6rem;
         font-size: 0.95rem;
     }
-    .shows-table tbody td:last-child a { white-space: nowrap; }
+    .shows-table tbody td a { white-space: nowrap; }
     
     .main-title {
         font-size: 2rem;
@@ -747,7 +757,7 @@ footer .copyright a:hover {
         padding: 0.7rem 0.5rem;
         font-size: 0.95rem;
     }
-    .shows-table tbody td:last-child a { white-space: nowrap; }
+    .shows-table tbody td a { white-space: nowrap; }
     
     .main-title {
         font-size: 1.75rem;
