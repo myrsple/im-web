@@ -9,8 +9,12 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --ticker-height: 42px;
+}
+
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -82,7 +86,7 @@ body {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 10010;
 }
 
 #snake-game canvas {
@@ -99,7 +103,7 @@ body {
     left: 10px;
     width: 200px;
     height: 40px;
-    z-index: 10000;
+    z-index: 10011;
     cursor: pointer;
 }
 
@@ -199,6 +203,84 @@ header .logo {
     border-radius: 0;
 }
 
+/* Shows (Upcoming) section */
+.shows-section {
+    background-color: rgba(0,24,130,255);
+    padding: 2rem 2rem;
+}
+
+.shows-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shows-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgba(255,255,255,0.95);
+    text-align: left;
+    margin: 0 auto 1.25rem auto;
+}
+
+.shows-title:hover {
+    color: #fcc400;
+}
+
+.shows-table-wrapper {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.shows-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shows-table thead th {
+    text-align: center;
+    color: rgba(255,255,255,0.95);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+    background: rgba(255,255,255,0.06);
+}
+
+.shows-table tbody td {
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.shows-table tbody tr:hover td {
+    background: rgba(255,255,255,0.06);
+}
+
+.shows-empty {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+}
+
+.ticket-link {
+    color: #fcc400;
+    text-decoration: none;
+}
+
+.ticket-link:hover {
+    text-decoration: underline;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
 /* Linktree section */
 .linktree-section {
     background-color: rgba(0,24,130,255);
@@ -207,7 +289,7 @@ header .logo {
 }
 
 .main-title {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
     color: rgba(255,255,255,0.95);
@@ -227,7 +309,7 @@ header .logo {
 }
 
 .bio-text p {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.1rem;
     line-height: 1.6;
     color: rgba(255,255,255,0.9);
@@ -250,8 +332,8 @@ header .logo {
 }
 
 .column-headline {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     font-size: 1.25rem;
     color: rgba(255,255,255,0.95);
     margin-bottom: 1rem;
@@ -330,7 +412,7 @@ header .logo {
 }
 
 .card-content h3 {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 1rem;
     color: rgba(255,255,255,0.95);
@@ -366,8 +448,8 @@ header .logo {
 }
 
 .contact-headline a {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
     color: rgba(255,255,255,0.95);
     text-decoration: none;
@@ -404,13 +486,13 @@ header .logo {
 /* Footer styles */
 footer {
     background-color: rgba(0,24,130,255);
-    padding: 1.5rem 0 2rem 0;
+    padding: 1.5rem 0 calc(2rem + var(--ticker-height)) 0; /* add bottom space for ticker */
     text-align: center;
 }
 
 footer .copyright {
     color: rgba(255,255,255,0.6);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 0.85rem;
     margin: 0;
     line-height: 1.4;
@@ -424,6 +506,84 @@ footer .copyright a {
 
 footer .copyright a:hover {
     color: magenta;
+}
+
+/* Bottom ticker bar */
+.ticker-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--ticker-height);
+    background: #000;
+    color: #fcc400;
+    z-index: 10002; /* above snake overlay */
+    overflow: hidden;
+    --ticker-gap: 33.33vw; /* spacing between repeated messages */
+}
+
+.ticker-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ticker-motion {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: ticker-loop 7.3s linear infinite;
+}
+
+.ticker-group {
+    display: flex;
+    gap: var(--ticker-gap); /* even spacing */
+    padding-right: var(--ticker-gap); /* ensure seamless gap between groups */
+}
+
+.ticker-link {
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    white-space: nowrap;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ticker-link:hover {
+    color: #fcc400;
+    text-decoration: none;
+}
+
+/* Pause the whole track when hovered */
+.ticker-motion:hover {
+    animation-play-state: paused;
+}
+
+.ticker-accent { color: #fcc400; }
+
+@keyframes ticker-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* duplicate group handles seamless loop */
+
+@media (max-width: 768px) {
+    .ticker-bar { height: 36px; }
+}
+
+/* Slow ticker slightly on large screens */
+@media (min-width: 1280px) {
+    .ticker-motion {
+        animation-duration: 8.4s; /* ~15% slower than 7.3s */
+    }
 }
 
 /* Responsive adjustments */
@@ -474,6 +634,10 @@ footer .copyright a:hover {
     }
     
     .linktree-section {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .shows-section {
         padding: 1.5rem 1.5rem;
     }
     
@@ -566,6 +730,10 @@ footer .copyright a:hover {
     }
     
     .linktree-section {
+        padding: 1rem 1rem;
+    }
+
+    .shows-section {
         padding: 1rem 1rem;
     }
     

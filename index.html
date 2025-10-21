@@ -13,7 +13,7 @@
     <title>Island Mint</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czech Republic.">
+    <meta name="description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czechia. Stream SLUN and get tickets for our upcoming shows.">
     <meta name="keywords" content="Island Mint, indie band, Prague, Czech Republic, music, indie rock, psychedelic, shoegaze">
     <meta name="author" content="Island Mint">
     <meta name="robots" content="index, follow">
@@ -37,7 +37,7 @@
     <meta name="twitter:image" content="https://islandmint.cz/images/og.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="c1b71881-5c8e-4f36-87ff-05f338b2c258"></script>
@@ -112,7 +112,7 @@
                             <img src="images/mint.JPG" alt="Concert" class="og-image">
                         </div>
                         <div class="card-content">
-                            <h3>Album release party October 31st</h3>
+                            <h3>Album release party Oct 31</h3>
                         </div>
                     </a>
                     
@@ -202,6 +202,63 @@
         </div>
     </section>
     
+    <section class="shows-section">
+        <div class="shows-container" data-sheet-id="" data-sheet-name="Upcoming">
+            <h2 class="shows-title">Upcoming shows</h2>
+            <div class="shows-table-wrapper">
+                <table class="shows-table" aria-describedby="shows-note">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Tickets</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shows-tbody">
+                        <tr>
+                            <td>30.10.</td>
+                            <td>Plzeň</td>
+                            <td><a class="ticket-link" href="https://maps.google.com/?q=New%20M%C5%8D%C5%8Dvement%20Plze%C5%88" target="_blank" rel="noopener noreferrer">New Mōōvement</a></td>
+                            <td><a class="ticket-link" href="https://goout.net/en/tickets/inspiral-off/qdgib/" target="_blank" rel="noopener noreferrer">Get</a></td>
+                        </tr>
+                        <tr>
+                            <td>31.10.</td>
+                            <td>Praha</td>
+                            <td><a class="ticket-link" href="https://maps.google.com/?q=MeetFactory%20Prague" target="_blank" rel="noopener noreferrer">MeetFactory</a></td>
+                            <td><a class="ticket-link" href="https://goout.net/en/tickets/island-mint-album-release+brankos-bridge/tydfb/" target="_blank" rel="noopener noreferrer">Get</a></td>
+                        </tr>
+                        <tr>
+                            <td>14.11.</td>
+                            <td>Dresden</td>
+                            <td><a class="ticket-link" href="https://maps.google.com/?q=Chemiefabrik%20Dresden" target="_blank" rel="noopener noreferrer">Chemiefabrik</a></td>
+                            <td><a class="ticket-link" href="https://www.tixforgigs.com/Event/66790" target="_blank" rel="noopener noreferrer">Get</a></td>
+                        </tr>
+                        <tr>
+                            <td>15.11.</td>
+                            <td>Ústí nad Labem</td>
+                            <td><a class="ticket-link" href="https://maps.google.com/?q=N%C3%A1rodn%C3%AD%20d%C5%AFm%20%C3%9Ast%C3%AD%20nad%20Labem" target="_blank" rel="noopener noreferrer">Národní dům</a></td>
+                            <td><a class="ticket-link" href="https://www.vstupenkyusti.cz/cs/akce/2629-island-mint-david-pomahac" target="_blank" rel="noopener noreferrer">Get</a></td>
+                        </tr>
+                        <tr>
+                            <td>21.11.</td>
+                            <td>Brno</td>
+                            <td><a class="ticket-link" href="https://maps.google.com/?q=Klub%20Alterna%20Brno" target="_blank" rel="noopener noreferrer">Klub Alterna</a></td>
+                            <td><a class="ticket-link" href="https://goout.net/en/tickets/christina-mantis+island-mint/sdyfb/" target="_blank" rel="noopener noreferrer">Get</a></td>
+                        </tr>
+                        <tr>
+                            <td>22.11.</td>
+                            <td>Ostrava</td>
+                            <td><a class="ticket-link" href="https://maps.app.goo.gl/uDhnVUjMKkXUDbbH8" target="_blank" rel="noopener noreferrer">Kulturní centrum Provoz</a></td>
+                            <td>Coming soon</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="shows-note" class="visually-hidden">This table can be automatically populated from Google Sheets.</p>
+            </div>
+        </div>
+    </section>
+    
     <section class="contact-section">
         <div class="contact-container">
             <div class="contact-column">
@@ -237,6 +294,176 @@
     <footer>
         <p class="copyright">© 2025 Island Mint | site by <a href="https://kovarik.xyz" target="_blank" rel="noopener noreferrer">kovarik.xyz</a></p>
     </footer>
+
+    <div class="ticker-bar" aria-live="polite" aria-label="Announcement">
+        <div class="ticker-inner">
+            <div class="ticker-motion">
+                <div class="ticker-group">
+                    <a class="ticker-link" href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer">
+                        NEW ALBUM <span class="ticker-accent">SLUN</span> OUT NOW ON ALL STREAMING PLATFORMS
+                    </a>
+                    <a class="ticker-link" href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer">
+                        NEW ALBUM <span class="ticker-accent">SLUN</span> OUT NOW ON ALL STREAMING PLATFORMS
+                    </a>
+                    <a class="ticker-link" href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer">
+                        NEW ALBUM <span class="ticker-accent">SLUN</span> OUT NOW ON ALL STREAMING PLATFORMS
+                    </a>
+                </div>
+                <div class="ticker-group" aria-hidden="true">
+                    <a class="ticker-link" href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer">
+                        NEW ALBUM <span class="ticker-accent">SLUN</span> OUT NOW ON ALL STREAMING PLATFORMS
+                    </a>
+                    <a class="ticker-link" href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer">
+                        NEW ALBUM <span class="ticker-accent">SLUN</span> OUT NOW ON ALL STREAMING PLATFORMS
+                    </a>
+                    <a class="ticker-link" href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer">
+                        NEW ALBUM <span class="ticker-accent">SLUN</span> OUT NOW ON ALL STREAMING PLATFORMS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Event",
+          "name": "Island Mint — Plzeň",
+          "startDate": "2025-10-30",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "New Mōōvement",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Plzeň",
+              "addressCountry": "CZ"
+            },
+            "sameAs": "https://maps.google.com/?q=New%20M%C5%8D%C5%8Dvement%20Plze%C5%88"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goout.net/en/tickets/inspiral-off/qdgib/",
+            "availability": "https://schema.org/InStock"
+          },
+          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
+        },
+        {
+          "@type": "Event",
+          "name": "Island Mint — Praha",
+          "startDate": "2025-10-31",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "MeetFactory",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Praha",
+              "addressCountry": "CZ"
+            },
+            "sameAs": "https://maps.google.com/?q=MeetFactory%20Prague"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goout.net/en/tickets/island-mint-album-release+brankos-bridge/tydfb/",
+            "availability": "https://schema.org/InStock"
+          },
+          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
+        },
+        {
+          "@type": "Event",
+          "name": "Island Mint — Dresden",
+          "startDate": "2025-11-14",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Chemiefabrik",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dresden",
+              "addressCountry": "DE"
+            },
+            "sameAs": "https://maps.google.com/?q=Chemiefabrik%20Dresden"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.tixforgigs.com/Event/66790",
+            "availability": "https://schema.org/InStock"
+          },
+          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
+        },
+        {
+          "@type": "Event",
+          "name": "Island Mint — Ústí nad Labem",
+          "startDate": "2025-11-15",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Národní dům",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ústí nad Labem",
+              "addressCountry": "CZ"
+            },
+            "sameAs": "https://maps.google.com/?q=N%C3%A1rodn%C3%AD%20d%C5%AFm%20%C3%9Ast%C3%AD%20nad%20Labem"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.vstupenkyusti.cz/cs/akce/2629-island-mint-david-pomahac",
+            "availability": "https://schema.org/InStock"
+          },
+          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
+        },
+        {
+          "@type": "Event",
+          "name": "Island Mint — Brno",
+          "startDate": "2025-11-21",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Klub Alterna",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Brno",
+              "addressCountry": "CZ"
+            },
+            "sameAs": "https://maps.google.com/?q=Klub%20Alterna%20Brno"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goout.net/en/tickets/christina-mantis+island-mint/sdyfb/",
+            "availability": "https://schema.org/InStock"
+          },
+          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
+        },
+        {
+          "@type": "Event",
+          "name": "Island Mint — Ostrava",
+          "startDate": "2025-11-22",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Kulturní centrum Provoz",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ostrava",
+              "addressCountry": "CZ"
+            },
+            "sameAs": "https://maps.app.goo.gl/uDhnVUjMKkXUDbbH8"
+          },
+          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
+        }
+      ]
+    }
+    </script>
 
     <script>
         // Enhanced Arrow Key Navigation
@@ -359,6 +586,113 @@
                 }
             });
         });
+
+        // Google Sheets loader for Upcoming shows
+        function buildGvizUrl(sheetId, sheetName) {
+            const encodedSheetName = encodeURIComponent(sheetName || 'Sheet1');
+            return `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?sheet=${encodedSheetName}`;
+        }
+
+        function extractGvizJson(text) {
+            // gviz returns JS like: google.visualization.Query.setResponse({...});
+            const start = text.indexOf('{');
+            const end = text.lastIndexOf('}');
+            if (start === -1 || end === -1) return null;
+            try {
+                return JSON.parse(text.slice(start, end + 1));
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function formatCellValue(cell) {
+            if (!cell) return '';
+            if (typeof cell.f !== 'undefined' && cell.f !== null) return String(cell.f);
+            if (typeof cell.v === 'object' && cell.v !== null) return String(cell.v);
+            return typeof cell.v !== 'undefined' && cell.v !== null ? String(cell.v) : '';
+        }
+
+        function createTicketsCellContent(value) {
+            const trimmed = value.trim();
+            if (!trimmed) return document.createTextNode('');
+            const isUrl = /^https?:\/\//i.test(trimmed);
+            if (!isUrl) return document.createTextNode(trimmed);
+            const a = document.createElement('a');
+            a.href = trimmed;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.className = 'ticket-link';
+            a.textContent = 'Get';
+            return a;
+        }
+
+        async function loadShowsFromGoogleSheet(sheetId, sheetName) {
+            try {
+                const url = buildGvizUrl(sheetId, sheetName);
+                const res = await fetch(url);
+                const text = await res.text();
+                const json = extractGvizJson(text);
+                if (!json || !json.table || !Array.isArray(json.table.rows)) return [];
+                return json.table.rows
+                    .map(r => (r && Array.isArray(r.c)) ? r.c : [])
+                    .map(cols => ({
+                        date: formatCellValue(cols[0]),
+                        city: formatCellValue(cols[1]),
+                        venue: formatCellValue(cols[2]),
+                        tickets: formatCellValue(cols[3])
+                    }))
+                    .filter(row => row.date || row.city || row.venue || row.tickets);
+            } catch (e) {
+                return [];
+            }
+        }
+
+        async function initShowsTable() {
+            const container = document.querySelector('.shows-container');
+            const tbody = document.getElementById('shows-tbody');
+            if (!container || !tbody) return;
+
+            const sheetId = (container.getAttribute('data-sheet-id') || '').trim();
+            const sheetName = (container.getAttribute('data-sheet-name') || 'Upcoming').trim();
+
+            // If no sheet configured yet, leave the placeholder row
+            if (!sheetId) return;
+
+            const rows = await loadShowsFromGoogleSheet(sheetId, sheetName);
+            // Clear existing tbody
+            tbody.innerHTML = '';
+
+            if (!rows.length) {
+                const tr = document.createElement('tr');
+                const td = document.createElement('td');
+                td.colSpan = 4;
+                td.className = 'shows-empty';
+                td.textContent = 'No upcoming shows yet';
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+                return;
+            }
+
+            rows.forEach(row => {
+                const tr = document.createElement('tr');
+                const dateTd = document.createElement('td');
+                dateTd.textContent = row.date;
+                const cityTd = document.createElement('td');
+                cityTd.textContent = row.city;
+                const venueTd = document.createElement('td');
+                venueTd.textContent = row.venue;
+                const ticketsTd = document.createElement('td');
+                ticketsTd.appendChild(createTicketsCellContent(row.tickets));
+
+                tr.appendChild(dateTd);
+                tr.appendChild(cityTd);
+                tr.appendChild(venueTd);
+                tr.appendChild(ticketsTd);
+                tbody.appendChild(tr);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initShowsTable);
 
         var
         COLS,
