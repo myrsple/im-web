@@ -518,7 +518,7 @@ footer .copyright a:hover {
     color: magenta;
 }
 
-/* Bottom ticker bar */
+/* Bottom ticker bar - FIXED VERSION */
 .ticker-bar {
     position: fixed;
     left: 0;
@@ -527,9 +527,8 @@ footer .copyright a:hover {
     height: var(--ticker-height);
     background: #000;
     color: #fcc400;
-    z-index: 10002; /* above snake overlay */
+    z-index: 10002;
     overflow: hidden;
-    --ticker-gap: 33.33vw; /* spacing between repeated messages */
 }
 
 .ticker-inner {
@@ -545,15 +544,15 @@ footer .copyright a:hover {
 
 .ticker-motion {
     display: flex;
-    width: max-content;
     will-change: transform;
-    animation: ticker-loop 7.3s linear infinite;
+    animation: ticker-loop 15.3s linear infinite;
 }
 
 .ticker-group {
     display: flex;
-    gap: var(--ticker-gap); /* even spacing */
-    padding-right: var(--ticker-gap); /* ensure seamless gap between groups */
+    align-items: center;
+    min-width: 100vw; /* Ensure full width coverage */
+    justify-content: space-around; /* Even distribution */
 }
 
 .ticker-link {
@@ -561,9 +560,9 @@ footer .copyright a:hover {
     font-style: italic;
     font-weight: 500;
     white-space: nowrap;
-    display: inline-block;
     color: #fff;
     text-decoration: none;
+    padding: 0 4rem; /* Increased spacing between sentences */
 }
 
 .ticker-link:hover {
@@ -571,7 +570,6 @@ footer .copyright a:hover {
     text-decoration: none;
 }
 
-/* Pause the whole track when hovered (desktop only) */
 @media (hover: hover) and (pointer: fine) {
     .ticker-motion:hover {
         animation-play-state: paused;
@@ -582,20 +580,12 @@ footer .copyright a:hover {
 
 @keyframes ticker-loop {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-100vw); }
 }
-
-/* duplicate group handles seamless loop */
 
 @media (max-width: 768px) {
     .ticker-bar { height: 36px; }
-}
-
-/* Slow ticker slightly on large screens */
-@media (min-width: 1280px) {
-    .ticker-motion {
-        animation-duration: 8.4s; /* ~15% slower than 7.3s */
-    }
+    .ticker-motion { animation-duration: 12.75s; }
 }
 
 /* Responsive adjustments */
