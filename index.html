@@ -14,19 +14,30 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czechia. Stream SLUN and get tickets for our upcoming shows.">
-    <meta name="keywords" content="Island Mint, indie band, Prague, Czech Republic, music, indie rock, psychedelic, shoegaze">
     <meta name="author" content="Island Mint">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://islandmint.cz">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://islandmint.cz/">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="images/og.jpg">
+    <!-- Favicon (square for platforms that use site icon) -->
+    <link rel="icon" type="image/png" href="images/og-square.png">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Island Mint">
     <meta property="og:description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czech Republic.">
+    <meta property="og:locale" content="en_US">
+    <!-- Prefer landscape for platforms that show wide previews -->
     <meta property="og:image" content="https://islandmint.cz/images/og.jpg">
-    <meta property="og:url" content="https://islandmint.cz">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Island Mint band photo with logo">
+    <meta property="og:image:secure_url" content="https://islandmint.cz/images/og.jpg">
+    <!-- Provide a square alternative for crawlers (e.g., Google/Slack small cards) -->
+    <meta property="og:image" content="https://islandmint.cz/images/og-square.png">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1600">
+    <meta property="og:image:alt" content="Island Mint square logo">
+    <meta property="og:image:secure_url" content="https://islandmint.cz/images/og-square.png">
+    <meta property="og:url" content="https://islandmint.cz/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Island Mint">
     
@@ -35,8 +46,40 @@
     <meta name="twitter:title" content="Island Mint">
     <meta name="twitter:description" content="Mesmerizing, sun-drenched, heartwarming... Island Mint is a five-piece indie band based in Prague, Czech Republic.">
     <meta name="twitter:image" content="https://islandmint.cz/images/og.jpg">
+    <meta name="twitter:image:alt" content="Island Mint band photo with logo">
+    <!-- Some parsers also look at itemprop as fallback -->
+    <meta itemprop="image" content="https://islandmint.cz/images/og.jpg">
+    
+    <!-- Organization / MusicGroup structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Island Mint",
+      "url": "https://islandmint.cz/",
+      "logo": "https://islandmint.cz/images/og-square.png",
+      "sameAs": [
+        "https://open.spotify.com/artist/1vVcWrAI5GcT8A2c9KZS2j",
+        "https://www.youtube.com/channel/UCFD8e2-RvRZUxgyjmrukrSQ",
+        "https://www.instagram.com/island_mint/",
+        "https://islandmint.bandcamp.com/",
+        "https://music.apple.com/cz/artist/island-mint/1514755142"
+      ]
+    }
+    </script>
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//i.ytimg.com">
+    <link rel="dns-prefetch" href="//api.allorigins.win">
+    <link rel="dns-prefetch" href="//docs.google.com">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="images/island-mint.png">
+    <link rel="preload" as="image" href="images/mint.JPG">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -62,18 +105,18 @@
     </div>
 
     <header>
-        <img src="images/island-mint.png" alt="Island Mint" class="logo">
+        <img src="images/island-mint.png" alt="Island Mint" class="logo" width="1600" height="482">
         <div class="social-links">
-            <a href="https://open.spotify.com/artist/1vVcWrAI5GcT8A2c9KZS2j" target="_blank" rel="noopener noreferrer">
+            <a href="https://open.spotify.com/artist/1vVcWrAI5GcT8A2c9KZS2j" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
                 <i class="fab fa-spotify"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCFD8e2-RvRZUxgyjmrukrSQ" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/channel/UCFD8e2-RvRZUxgyjmrukrSQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <i class="fab fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/island_mint/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/island_mint/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://islandmint.bandcamp.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://islandmint.bandcamp.com/" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
                 <i class="fab fa-bandcamp"></i>
             </a>
             <a href="https://music.apple.com/cz/artist/island-mint/1514755142" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
@@ -83,7 +126,7 @@
     </header>
     
     <section class="hero-image">
-        <img src="images/mint.JPG" alt="Island Mint">
+        <img src="images/mint.JPG" alt="Island Mint" fetchpriority="high" width="1800" height="1200">
     </section>
     
     
@@ -95,7 +138,7 @@
                 title="Island Mint Video"
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
+                loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
         </div>
     </section>
@@ -110,27 +153,27 @@
             <div class="linktree-column">
                 <h2 class="column-headline">SLUN</h2>
                 <div class="column-cards">
-                    <a href="https://goout.net/en/island-mint-album-release%2Bbrankos-bridge/szyjuvx/" target="_blank" class="linktree-card album-release-card" data-fetch-og="true">
+            <a href="https://goout.net/en/island-mint-album-release%2Bbrankos-bridge/szyjuvx/" target="_blank" rel="noopener noreferrer" class="linktree-card album-release-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="images/mint.JPG" alt="Concert" class="og-image">
+                            <img src="images/mint.JPG" alt="Concert" class="og-image" loading="lazy" decoding="async" width="80" height="80">
                         </div>
                         <div class="card-content">
                             <h3>Album release party Oct 31</h3>
                         </div>
                     </a>
                     
-                    <a href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="images/mint.JPG" alt="Stream on Spotify" class="og-image">
+                            <img src="images/mint.JPG" alt="Stream on Spotify" class="og-image" loading="lazy" decoding="async" width="80" height="80">
                         </div>
                         <div class="card-content">
                             <h3>Stream on Spotify</h3>
                         </div>
                     </a>
                     
-                    <a href="https://www.youtube.com/watch?v=mr4c68tMHqo" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://www.youtube.com/watch?v=mr4c68tMHqo" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="https://i.ytimg.com/vi/mr4c68tMHqo/maxresdefault.jpg" alt="YouTube video" class="og-image">
+                            <img src="https://i.ytimg.com/vi/mr4c68tMHqo/maxresdefault.jpg" alt="YouTube video" class="og-image" loading="lazy" decoding="async" width="1280" height="720">
                         </div>
                         <div class="card-content">
                             <h3>Fool Around – music video</h3>
@@ -142,36 +185,36 @@
             <div class="linktree-column">
                 <h2 class="column-headline">Music videos</h2>
                 <div class="column-cards">
-                    <a href="https://youtu.be/cbvx9q_GjBc?si=J-HrtaYUzlghjpOu" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://youtu.be/cbvx9q_GjBc?si=J-HrtaYUzlghjpOu" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="https://i.ytimg.com/vi/cbvx9q_GjBc/maxresdefault.jpg" alt="Man of the People" class="og-image">
+                            <img src="https://i.ytimg.com/vi/cbvx9q_GjBc/maxresdefault.jpg" alt="Man of the People" class="og-image" loading="lazy" decoding="async" width="1280" height="720">
                         </div>
                         <div class="card-content">
                             <h3>Man of the People</h3>
                         </div>
                     </a>
                     
-                    <a href="https://www.youtube.com/watch?v=FMpJhj0Qwp0" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://www.youtube.com/watch?v=FMpJhj0Qwp0" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="https://i.ytimg.com/vi/FMpJhj0Qwp0/maxresdefault.jpg" alt="Burnout" class="og-image">
+                            <img src="https://i.ytimg.com/vi/FMpJhj0Qwp0/maxresdefault.jpg" alt="Burnout" class="og-image" loading="lazy" decoding="async" width="1280" height="720">
                         </div>
                         <div class="card-content">
                             <h3>Burnout</h3>
                         </div>
                     </a>
                     
-                    <a href="https://www.youtube.com/watch?v=kLiK7QKFzxs" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://www.youtube.com/watch?v=kLiK7QKFzxs" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="https://i.ytimg.com/vi/kLiK7QKFzxs/maxresdefault.jpg" alt="Insomnia Town" class="og-image">
+                            <img src="https://i.ytimg.com/vi/kLiK7QKFzxs/maxresdefault.jpg" alt="Insomnia Town" class="og-image" loading="lazy" decoding="async" width="1280" height="720">
                         </div>
                         <div class="card-content">
                             <h3>Insomnia Town</h3>
                         </div>
                     </a>
                     
-                    <a href="https://www.youtube.com/watch?v=sOo313Juwvs" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://www.youtube.com/watch?v=sOo313Juwvs" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="https://i.ytimg.com/vi/sOo313Juwvs/maxresdefault.jpg" alt="Irreality" class="og-image">
+                            <img src="https://i.ytimg.com/vi/sOo313Juwvs/maxresdefault.jpg" alt="Irreality" class="og-image" loading="lazy" decoding="async" width="1280" height="720">
                         </div>
                         <div class="card-content">
                             <h3>Irreality</h3>
@@ -183,18 +226,18 @@
             <div class="linktree-column">
                 <h2 class="column-headline">Interviews</h2>
                 <div class="column-cards">
-                    <a href="https://swarmmag.com/music/all-studium-no-punctum/" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://swarmmag.com/music/all-studium-no-punctum/" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="images/mint.JPG" alt="Interview" class="og-image">
+                            <img src="images/mint.JPG" alt="Interview" class="og-image" loading="lazy" decoding="async" width="80" height="80">
                         </div>
                         <div class="card-content">
                             <h3>Swarm Mag</h3>
                         </div>
                     </a>
                     
-                    <a href="https://wave.rozhlas.cz/hudba-je-pro-me-hra-odhaluju-v-ni-sve-vnitrni-dite-rika-matyas-adamek-z-kapely-8763898" target="_blank" class="linktree-card" data-fetch-og="true">
+                    <a href="https://wave.rozhlas.cz/hudba-je-pro-me-hra-odhaluju-v-ni-sve-vnitrni-dite-rika-matyas-adamek-z-kapely-8763898" target="_blank" rel="noopener noreferrer" class="linktree-card" data-fetch-og="true">
                         <div class="card-image">
-                            <img src="images/mint.JPG" alt="Radio Interview" class="og-image">
+                            <img src="images/mint.JPG" alt="Radio Interview" class="og-image" loading="lazy" decoding="async" width="80" height="80">
                         </div>
                         <div class="card-content">
                             <h3>Radio Wave</h3>
@@ -250,14 +293,13 @@
                 title="Radio Wave Studio Session"
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
+                loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
         </div>
     </section>
     
     <section class="osa-banner">
-        <img src="images/osa-logo.png" alt="OSA logo" class="osa-logo">
+        <img src="images/osa-logo.png" alt="OSA logo" class="osa-logo" width="140" height="61" loading="lazy" decoding="async">
     </section>
     
     <footer>
@@ -293,146 +335,7 @@
         </div>
     </div>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Event",
-          "name": "Island Mint — Plzeň",
-          "startDate": "2025-10-30",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "New Mōōvement",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Plzeň",
-              "addressCountry": "CZ"
-            },
-            "sameAs": "https://maps.google.com/?q=New%20M%C5%8D%C5%8Dvement%20Plze%C5%88"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://goout.net/en/tickets/inspiral-off/qdgib/",
-            "availability": "https://schema.org/InStock"
-          },
-          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
-        },
-        {
-          "@type": "Event",
-          "name": "Island Mint — Praha",
-          "startDate": "2025-10-31",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "MeetFactory",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Praha",
-              "addressCountry": "CZ"
-            },
-            "sameAs": "https://maps.google.com/?q=MeetFactory%20Prague"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://goout.net/en/tickets/island-mint-album-release+brankos-bridge/tydfb/",
-            "availability": "https://schema.org/InStock"
-          },
-          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
-        },
-        {
-          "@type": "Event",
-          "name": "Island Mint — Dresden",
-          "startDate": "2025-11-14",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "Chemiefabrik",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dresden",
-              "addressCountry": "DE"
-            },
-            "sameAs": "https://maps.google.com/?q=Chemiefabrik%20Dresden"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.tixforgigs.com/Event/66790",
-            "availability": "https://schema.org/InStock"
-          },
-          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
-        },
-        {
-          "@type": "Event",
-          "name": "Island Mint — Ústí nad Labem",
-          "startDate": "2025-11-15",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "Národní dům",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Ústí nad Labem",
-              "addressCountry": "CZ"
-            },
-            "sameAs": "https://maps.google.com/?q=N%C3%A1rodn%C3%AD%20d%C5%AFm%20%C3%9Ast%C3%AD%20nad%20Labem"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.vstupenkyusti.cz/cs/akce/2629-island-mint-david-pomahac",
-            "availability": "https://schema.org/InStock"
-          },
-          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
-        },
-        {
-          "@type": "Event",
-          "name": "Island Mint — Brno",
-          "startDate": "2025-11-21",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "Klub Alterna",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Brno",
-              "addressCountry": "CZ"
-            },
-            "sameAs": "https://maps.google.com/?q=Klub%20Alterna%20Brno"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://goout.net/en/tickets/christina-mantis+island-mint/sdyfb/",
-            "availability": "https://schema.org/InStock"
-          },
-          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
-        },
-        {
-          "@type": "Event",
-          "name": "Island Mint — Ostrava",
-          "startDate": "2025-11-22",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "Kulturní centrum Provoz",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Ostrava",
-              "addressCountry": "CZ"
-            },
-            "sameAs": "https://maps.app.goo.gl/uDhnVUjMKkXUDbbH8"
-          },
-          "performer": { "@type": "MusicGroup", "name": "Island Mint" }
-        }
-      ]
-    }
-    </script>
+    
 
     <script>
         // Enhanced Arrow Key Navigation
