@@ -94,16 +94,6 @@
     <!-- Clickable area for game controls -->
     <div class="game-controls"></div>
 
-    <!-- Slun album popup modal -->
-    <div id="slun-modal" class="slun-modal-overlay" aria-hidden="true">
-        <div class="slun-modal-content" role="dialog" aria-modal="true" aria-label="Slun album">
-            <button class="slun-modal-close" aria-label="Close popup">×</button>
-            <a href="https://open.spotify.com/album/0Z7BWVEHBT8qQdcuNCSW4S" target="_blank" rel="noopener noreferrer" class="slun-modal-link">
-                <img src="images/slun.png" alt="Slun album by Island Mint" class="slun-modal-image">
-            </a>
-        </div>
-    </div>
-
     <header>
         <img src="images/island-mint.png" alt="Island Mint" class="logo" width="1600" height="482">
         <div class="social-links">
@@ -275,7 +265,7 @@
         <div class="contact-container">
             <div class="contact-column">
                 <h2 class="contact-headline">
-                    <a href="https://drive.google.com/drive/folders/1L6kzdaAbbi2RM4kCTNmkJfphqVOyU--B?usp=sharing" target="_blank" rel="noopener noreferrer">Media kit & rider</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/19i_-HsMf8bCBjgar7FehV1KcyGagxt4Y" target="_blank" rel="noopener noreferrer">Media kit & rider</a>
                 </h2>
             </div>
             <div class="contact-column">
@@ -1779,48 +1769,6 @@
         // Start the game when page loads
         window.addEventListener('load', main);
 
-        // Slun modal logic: show once per session
-        document.addEventListener('DOMContentLoaded', function() {
-            try {
-                var modal = document.getElementById('slun-modal');
-                if (!modal) return;
-
-                var hasSeen = sessionStorage.getItem('slunModalSeen') === 'true';
-                if (!hasSeen) {
-                    modal.classList.add('is-visible');
-                    modal.setAttribute('aria-hidden', 'false');
-                    sessionStorage.setItem('slunModalSeen', 'true');
-                }
-
-                // Close handlers
-                var closeBtn = modal.querySelector('.slun-modal-close');
-                if (closeBtn) {
-                    closeBtn.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        modal.classList.remove('is-visible');
-                        modal.setAttribute('aria-hidden', 'true');
-                    });
-                }
-
-                // Click outside to close
-                modal.addEventListener('click', function(e) {
-                    if (e.target === modal) {
-                        modal.classList.remove('is-visible');
-                        modal.setAttribute('aria-hidden', 'true');
-                    }
-                });
-
-                // Escape key to close
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && modal.classList.contains('is-visible')) {
-                        modal.classList.remove('is-visible');
-                        modal.setAttribute('aria-hidden', 'true');
-                    }
-                });
-            } catch (err) {
-                // No-op if storage blocked
-            }
-        });
     </script>
 </body>
 </html> 
